@@ -6,6 +6,15 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import kotlinx.android.synthetic.main.fragment_page.*
+
+fun newFragment(title: String): PageFragment {
+    val fragment = PageFragment()
+    val arguments = Bundle()
+    arguments.putString("TITLE", title)
+    fragment.arguments = arguments
+    return fragment
+}
 
 class PageFragment : Fragment() {
 
@@ -19,6 +28,8 @@ class PageFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         view.setBackgroundColor(getRandomColor())
+        val title = arguments?.getString("TITLE")
+        titleTextView.setText(title)
     }
 
     private fun getRandomColor() =

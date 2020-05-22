@@ -42,9 +42,9 @@ class MainActivity : AppCompatActivity() {
         /* этот метод по номеру страницы возвращает нужный фрагмент */
         override fun getItem(position: Int): Fragment {
             return when (position) {
-                0 -> PageFragment()
-                1 -> PageFragment()
-                else -> PageFragment()
+                0 -> newFragment("Чайный пакетик")
+                1 -> newFragment("Хлебушек")
+                else -> newFragment("Цифровой банан")
             }
         }
 

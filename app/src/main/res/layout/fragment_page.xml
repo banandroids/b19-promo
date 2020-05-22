@@ -8,7 +8,7 @@
     tools:context=".PageFragment">
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/titleTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="72dp"
@@ -35,8 +35,8 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:textColor="@android:color/black"
-        app:layout_constraintStart_toStartOf="@+id/textView3"
-        app:layout_constraintTop_toBottomOf="@+id/textView3"
+        app:layout_constraintStart_toStartOf="@+id/titleTextView"
+        app:layout_constraintTop_toBottomOf="@+id/titleTextView"
         android:text="Очень хороший и удобный" />
 
     <ImageView
